@@ -20,7 +20,7 @@ jobs:
           git clone https://github.com/walinejs/tcb-starter.git
           npm i -g @cloudbase/cli
           tcb login --apiKeyId "${{ secrets.SECRETID }}" --apiKey "${{ secrets.SECRETKEY }}"
-          tcb fn deploy "Waline" -e "${{ secrets.TCBENVID }}" --force
+          tcb fn deploy "Waline" -e "${{ secrets.TCBENVID }}" --force --dir ./tcb-starter
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
